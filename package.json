@@ -33,6 +33,9 @@
     "url": "https://github.com/baobab-tech/talentlms-js/issues"
   },
   "homepage": "https://github.com/baobab-tech/talentlms-js#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^22.5.4",
