@@ -46,3 +46,11 @@ async function example() {
 }
 example().catch(console.error);
 ```
+
+## Contributing
+
+We welcome contributions to the TalentLMS API Wrapper! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more information on how to get started.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
