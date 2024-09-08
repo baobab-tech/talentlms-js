@@ -98,3 +98,5 @@ interface TalentLMSConfig {
   }
   
   export default TalentLms;
+  
+  export { TalentLms, TalentLMSConfig, User, Course };
