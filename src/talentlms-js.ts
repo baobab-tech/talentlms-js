@@ -174,7 +174,194 @@ interface TalentLMSConfig {
       return this.request<User[]>(`courses/id:${course.id}/users`);
     }
   
-    // Add more methods as needed
+    // Not yet implemented methods
+    async userLogin() {
+      // Not yet implemented: /v1/userlogin
+    }
+
+    async isUserOnline(userId: string) {
+      // Not yet implemented: /v1/isuseronline/user_id:{user_id}
+    }
+
+    async userLogout() {
+      // Not yet implemented: /v1/userlogout
+    }
+
+    async userSignup() {
+      // Not yet implemented: /v1/usersignup
+    }
+
+    async deleteUser() {
+      // Not yet implemented: /v1/deleteuser
+    }
+
+    async editUser() {
+      // Not yet implemented: /v1/edituser
+    }
+
+    async setUserStatus(userId: string, status: string) {
+      // Not yet implemented: /v1/usersetstatus/user_id:{userId},status:{status}
+    }
+
+    async createCourse() {
+      // Not yet implemented: /v1/createcourse
+    }
+
+    async deleteCourse() {
+      // Not yet implemented: /v1/deletecourse
+    }
+
+    async getCategories() {
+      // Not yet implemented: /v1/categories
+    }
+
+    async getCategoryById(categoryId: string) {
+      // Not yet implemented: /v1/categories/id:{categoryId}
+    }
+
+    async getGroups() {
+      // Not yet implemented: /v1/groups
+    }
+
+    async getGroupById(groupId: string) {
+      // Not yet implemented: /v1/groups/id:{groupId}
+    }
+
+    async createGroup() {
+      // Not yet implemented: /v1/creategroup
+    }
+
+    async deleteGroup() {
+      // Not yet implemented: /v1/deletegroup
+    }
+
+    async getBranches() {
+      // Not yet implemented: /v1/branches
+    }
+
+    async getBranchById(branchId: string) {
+      // Not yet implemented: /v1/branches/id:{branchId}
+    }
+
+    async createBranch() {
+      // Not yet implemented: /v1/createbranch
+    }
+
+    async deleteBranch() {
+      // Not yet implemented: /v1/deletebranch
+    }
+
+    async setBranchStatus(branchId: string, status: string) {
+      // Not yet implemented: /v1/branchsetstatus/branch_id:{branchId},status:{status}
+    }
+
+    async forgotUsername(email: string, domainUrl: string) {
+      // Not yet implemented: /v1/forgotusername/email:{email},domain_url:{domainUrl}
+    }
+
+    async forgotPassword(userName: string, domainUrl: string, redirectUrl: string) {
+      // Not yet implemented: /v1/forgotpassword/username:{userName},domain_url:{url},redirect_url:{url}
+    }
+
+    async addUserToCourse() {
+      // Not yet implemented: /v1/addusertocourse
+    }
+
+    async removeUserFromCourse(userId: string, courseId: string) {
+      // Not yet implemented: /v1/removeuserfromcourse/user_id:{userId},course_id:{courseId}
+    }
+
+    async getUserStatusInCourse(courseId: string, userId: string) {
+      // Not yet implemented: /v1/getuserstatusincourse/course_id:{courseId},user_id:{userId}
+    }
+
+    async resetUserProgress(courseId: string, userId: string) {
+      // Not yet implemented: /v1/resetuserprogress/course_id:{courseId},user_id:{userId}
+    }
+
+    async addUserToBranch(userId: string, branchId: string) {
+      // Not yet implemented: /v1/addusertobranch/user_id:{userId},branch_id:{branchId}
+    }
+
+    async removeUserFromBranch(userId: string, branchId: string) {
+      // Not yet implemented: /v1/removeuserfrombranch/user_id:{userId},branch_id:{branchId}
+    }
+
+    async addCourseToBranch(courseId: string, branchId: string) {
+      // Not yet implemented: /v1/addcoursetobranch/course_id:{courseId},branch_id:{branchId}
+    }
+
+    async addUserToGroup(userId: string, groupKey: string) {
+      // Not yet implemented: /v1/addusertogroup/user_id:{userId},group_key:{groupKey}
+    }
+
+    async removeUserFromGroup(userId: string, groupId: string) {
+      // Not yet implemented: /v1/removeuserfromgroup/user_id:{userId},group_id:{groupId}
+    }
+
+    async addCourseToGroup(courseId: string, groupId: string) {
+      // Not yet implemented: /v1/addcoursetogroup/course_id:{courseId},group_id:{groupId}
+    }
+
+    async goToCourse(userId: string, courseId: string) {
+      // Not yet implemented: /v1/gotocourse/user_id:{userId},course_id:{courseId}
+    }
+
+    async getUsersByCustomField(value: string) {
+      // Not yet implemented: /v1/getusersbycustomfield/custom_field_value:{value}
+    }
+
+    async getCoursesByCustomField(value: string) {
+      // Not yet implemented: /v1/getcoursesbycustomfield/custom_field_value:{value}
+    }
+
+    async buyCourse() {
+      // Not yet implemented: /v1/buycourse
+    }
+
+    async buyCategoryCourses() {
+      // Not yet implemented: /v1/buycategorycourses
+    }
+
+    async getCustomRegistrationFields() {
+      // Not yet implemented: /v1/getcustomregistrationfields
+    }
+
+    async getCustomCourseFields() {
+      // Not yet implemented: /v1/getcustomcoursefields
+    }
+
+    async getCategoryLeafsAndCourses(categoryId: string) {
+      // Not yet implemented: /v1/categoryleafsandcourses/id:{categoryId}
+    }
+
+    async getUsersProgressInUnits(unitId: string, userId: string) {
+      // Not yet implemented: /v1/getusersprogressinunits/unit_id:{unitId},user_id:{userId}
+    }
+
+    async getTestAnswers(testId: string, userId: string) {
+      // Not yet implemented: /v1/gettestanswers/test_id:{testId},user_id:{userId}
+    }
+
+    async getSurveyAnswers(surveyId: string, userId: string) {
+      // Not yet implemented: /v1/getsurveyanswers/survey_id:{surveyId},user_id:{userId}
+    }
+
+    async getIltSessions(iltId: string) {
+      // Not yet implemented: /v1/getiltsessions/ilt_id:{iltId}
+    }
+
+    async getTimeline() {
+      // Not yet implemented: /v1/gettimeline
+    }
+
+    async getSiteInfo() {
+      // Not yet implemented: /v1/siteinfo
+    }
+
+    async getRateLimit() {
+      // Not yet implemented: /v1/ratelimit
+    }
   }
   
   export default TalentLms;
