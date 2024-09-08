@@ -9,13 +9,19 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          VERSION=$(date +'%Y.%m.%d-%H%M')
-          gh release create v$VERSION \
-            --title "Release $VERSION" \
-            --generate-notes
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
+          body: |
+            Changes in this Release:
+            ${{ github.event.head_commit.message }}
+          draft: false
+          prerelease: false
