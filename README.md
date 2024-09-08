@@ -9,6 +9,7 @@ For any questions about the TalentLMS API, please check their support resources.
 
 [![npm version](https://badge.fury.io/js/talentlms-js.svg)](https://badge.fury.io/js/talentlms-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 ## Installation
 
