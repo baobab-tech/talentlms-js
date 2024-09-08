@@ -1,10 +1,10 @@
 {
-  "name": "talentlms-api",
+  "name": "talentlms-js",
   "version": "0.0.2",
   "description": "A TypeScript/JavaScript wrapper for the TalentLMS API",
-  "main": "./dist/talentlms-api.js",
-  "module": "./dist/talentlms-api.mjs",
-  "types": "./dist/talentlms-api.d.ts",
+  "main": "./dist/talentlms-js.js",
+  "module": "./dist/talentlms-js.mjs",
+  "types": "./dist/talentlms-js.d.ts",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
@@ -45,8 +45,8 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/talentlms-api.mjs",
-      "require": "./dist/talentlms-api.js"
+      "import": "./dist/talentlms-js.mjs",
+      "require": "./dist/talentlms-js.js"
     }
   }
 }

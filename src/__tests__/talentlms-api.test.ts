@@ -1,4 +1,4 @@
-import TalentLms from '../talentlms-api';
+import TalentLms from '../talentlms-js';
 import fetch from 'node-fetch';
 
 jest.mock('node-fetch');
