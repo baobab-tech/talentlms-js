@@ -10,34 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
-      - name: Check version change
-        id: check
-        uses: EndBug/version-check@v2
-        with:
-          file-name: package.json
-          
-      - name: Generate changelog
-        if: steps.check.outputs.changed == 'true'
-        run: npx auto-changelog --output CHANGELOG.md --commit-limit false
 
       - name: Create Release
-        if: steps.check.outputs.changed == 'true'
-        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ steps.check.outputs.version }}
-          release_name: Release ${{ steps.check.outputs.version }}
-          body_path: CHANGELOG.md
-          draft: false
-          prerelease: false
+        run: |
+          VERSION=$(date +'%Y.%m.%d-%H%M')
+          gh release create v$VERSION \
+            --title "Release $VERSION" \
+            --generate-notes
