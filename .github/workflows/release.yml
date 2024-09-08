@@ -1,4 +1,4 @@
-name: Create Release
+name: Generate Release
 
 on:
   push:
@@ -8,20 +8,28 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
-          body: |
-            Changes in this Release:
-            ${{ github.event.head_commit.message }}
-          draft: false
-          prerelease: false
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build
+      run: npm run build --if-present
+
+    - name: Generate release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: npx semantic-release
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
