@@ -19,7 +19,7 @@ Configure the TalentLms API wrapper with your API key and domain:
 import TalentLms from 'talentlms-js';
 
 const talentlms = new TalentLms({
-  apiKey: 'your_api_key', // as a base64 encoded string
+  apiKey: 'your_api_key', // as provided by TalentLMS
   subdomain: 'your_subdomain', // the subdomain part of your TalentLMS instance e.g. if your instance is at https://company.talentlms.com, then your subdomain is "company"
   // alternatively you can pass in the entire domain as a string e.g. "https://company.talentlms.com"
   domain: 'company.talentlms.com'

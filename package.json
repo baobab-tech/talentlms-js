@@ -1,5 +1,5 @@
 {
-  "name": "talentlms-js",
+  "name": "@baobabtech/talentlms-js",
   "version": "0.0.3",
   "description": "A TypeScript/JavaScript wrapper for the TalentLMS API",
   "type": "module",
@@ -27,7 +27,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baobab-tech/talentlms-js.git"
+    "url": "https://github.com/baobab-tech/talentlms-js"
   },
   "bugs": {
     "url": "https://github.com/baobab-tech/talentlms-js/issues"
