@@ -7,10 +7,10 @@ This wrapper is for https://www.talentlms.com/
 We have no affiliation with TalentLMS; we built this TypeScript version to help us support our clients.
 For any questions about the TalentLMS API, please check their support resources.
 
-[![npm version](https://badge.fury.io/js/@baobabtech%2Ftalentlms-js.svg)](https://badge.fury.io/js/@baobabtech%2Ftalentlms-js)
+[![npm version](https://badge.fury.io/js/talentlms-js.svg)](https://badge.fury.io/js/talentlms-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
-<!-- ![NPM Downloads](https://img.shields.io/npm/dm/@baobabtech/talentlms-js) -->
+<!-- ![NPM Downloads](https://img.shields.io/npm/dm/talentlms-js) -->
 
 ## Installation
 
