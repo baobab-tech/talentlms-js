@@ -1,5 +1,5 @@
 {
-  "name": "@baobabtech/talentlms-js",
+  "name": "talentlms-js",
   "version": "0.0.7",
   "description": "A TypeScript/JavaScript wrapper for the TalentLMS API",
   "type": "module",
