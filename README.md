@@ -2,11 +2,10 @@
 
 A TypeScript/JavaScript wrapper for the TalentLMS API, making it easy to interact with TalentLMS from your Node.js applications.
 
-<!-- 
+**Important Note:**
 This wrapper is for https://www.talentlms.com/
 We have no affiliation with TalentLMS; we built this TypeScript version to help us support our clients.
 For any questions about the TalentLMS API, please check their support resources.
--->
 
 [![npm version](https://badge.fury.io/js/talentlms-js.svg)](https://badge.fury.io/js/talentlms-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
