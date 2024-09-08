@@ -41,6 +41,7 @@ interface TalentLMSConfig {
       if (!config.apiKey) {
         throw new Error('API key is required');
       }
+
       this.apiKey = config.apiKey;
       this.subdomain = config.subdomain || '';
       this.domain = config.domain || '';
@@ -67,7 +68,7 @@ interface TalentLMSConfig {
     private async request<T>(endpoint: string, method: string = 'GET', body?: any): Promise<T> {
       const url = `${this.baseUrl}/${endpoint}`;
       const headers = {
-        'Authorization': `Basic ${this.apiKey}`,
+        'Authorization': `Basic ${Buffer.from(this.apiKey + ':').toString('base64')}`,
         'Content-Type': 'application/json',
       };
   

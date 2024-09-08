@@ -1,14 +1,20 @@
 {
   "name": "talentlms-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A TypeScript/JavaScript wrapper for the TalentLMS API",
-  "main": "./dist/talentlms-js.js",
-  "module": "./dist/talentlms-js.mjs",
-  "types": "./dist/talentlms-js.d.ts",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "eslint . --ext .ts"
   },
   "keywords": [
@@ -42,11 +48,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/talentlms-js.mjs",
-      "require": "./dist/talentlms-js.js"
-    }
   }
 }
